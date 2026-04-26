@@ -113,4 +113,6 @@ int main(){
             cout << "try a valid option" << endl;
         }
     }
+
+    return 0;
 }
