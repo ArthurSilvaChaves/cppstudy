@@ -78,7 +78,19 @@ int main(){
         } else if(escolha == 4){
             int indice;
 
-            
+            cout << "escolha o numero da tarefa para marcar como feita: ";
+            cin >> indice;
+
+            if(indice >= 1 && indice <= tarefas.size()){
+                if(tarefas[indice - 1].status == false){
+                    tarefas[indice - 1].status = true;
+                } else{
+                    cout << "essa tarefa esta ja esta marcada como concluida" <<  endl;
+                }
+            } else{
+                cout << "escolha um valor valido(esta tarefa nao existe)" << endl;
+            }
+
         } else if(escolha == 5){
             cout << "saindo..." << endl;
             break;
