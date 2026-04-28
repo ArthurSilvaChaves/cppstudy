@@ -64,18 +64,21 @@ int main(){
             cout << "tarefa criada com sucesso!" << endl;
         } else if(escolha == 3){
             int indice;
-            int index;
+
             cout << "insira o numero da tarefa para apagar: ";
             cin >> indice;
 
             if(indice >= 1 && indice <= tarefas.size()){
-                
+                tarefas.erase(tarefas.begin() + indice - 1);
+                cout << "tarefa removida!" << endl;
             } else{
                 cout << "escolha um valor valido(esta tarefa nao existe)" << endl;
             }
 
         } else if(escolha == 4){
+            int indice;
 
+            
         } else if(escolha == 5){
             cout << "saindo..." << endl;
             break;
