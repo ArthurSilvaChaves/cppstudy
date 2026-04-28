@@ -26,17 +26,19 @@ int main(){
             } else{
                 for(int i = 0;i < tarefas.size();i++){
                     cout << "--------------------------" << endl;
-                    cout << i+1 <<  " - " << endl;
+                    cout << i+1 <<  "." << endl;
                     cout << "tarefa: " << tarefas[i].nometarefa << endl;
-                    if(tarefas[i].dia >= 10 && tarefas[i].mes >= 10){
-                        cout << "dia: " << tarefas[i].dia << "/" << tarefas[i].mes << endl;
-                    } else if (tarefas[i].dia >= 10 && tarefas[i].mes < 10){
-                        cout << "dia: "<< tarefas[i].dia << "/" << "0" << tarefas[i].mes << endl;
-                    } else if(tarefas[i].dia < 10 && tarefas[i].mes >= 10){
-                        cout << "dia: " << "0" << tarefas[i].dia << "/" << tarefas[i].mes << endl;
-                    } else if(tarefas[i].dia < 10 && tarefas[i].mes < 10){
-                        cout << "dia: " << "0" << tarefas[i].dia << "/" << "0" << tarefas[i].mes << endl;
+                    if (tarefas[i].dia >= 10){
+                        cout << "dia: " << tarefas[i].dia;
+                    } else{
+                        cout << "dia: " << "0" << tarefas[i].dia;
                     }  
+
+                    if (tarefas[i].mes >= 10){
+                        cout << "/" << tarefas[i].mes << endl;
+                    } else{
+                        cout << "/" << "0" << tarefas[i].mes << endl;
+                    }
                     cout << "status: " << (tarefas[i].status ? "completa":"nao completa") << endl;
                 }
                 cout << "--------------------------" << endl ;
@@ -61,6 +63,16 @@ int main(){
 
             cout << "tarefa criada com sucesso!" << endl;
         } else if(escolha == 3){
+            int indice;
+            int index;
+            cout << "insira o numero da tarefa para apagar: ";
+            cin >> indice;
+
+            if(indice >= 1 && indice <= tarefas.size()){
+                
+            } else{
+                cout << "escolha um valor valido(esta tarefa nao existe)" << endl;
+            }
 
         } else if(escolha == 4){
 
