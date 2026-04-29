@@ -1,3 +1,4 @@
+//exemplo com ponteiros
 #include <iostream>
 using namespace std;
 
