@@ -10,7 +10,7 @@ int main(){
 
     char* p = &texto[0];
 
-    //for que percorre com a memoria diretamente
+    //for que percorre a string com a memoria diretamente
 
     for(int i = 0;i < texto.size();i++){
         cout << *(p + i) << endl;
